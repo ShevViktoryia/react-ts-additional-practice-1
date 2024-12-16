@@ -35,7 +35,7 @@ export function Todolist(props: PropsType) {
         {props.title}
         <button
           onClick={() => {
-            "removeTodolist";
+            props.removeTodolist(props.id);
           }}
         >
           x
