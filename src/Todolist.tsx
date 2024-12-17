@@ -24,7 +24,8 @@ export function Todolist(props: PropsType) {
   const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
     setError(null);
     if (e.charCode === 13) {
-      // addTask();
+      props.addTask(e.currentTarget.value, props.id);
+      setTitle("");
     }
   };
 
@@ -50,7 +51,8 @@ export function Todolist(props: PropsType) {
         />
         <button
           onClick={() => {
-            "addTask";
+            props.addTask(title, props.id);
+            setTitle("");
           }}
         >
           +
